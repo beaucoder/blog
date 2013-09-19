@@ -1,5 +1,15 @@
 Blog::Application.routes.draw do
-  get "welcome/index"
+
+  resources :posts
+
+  root "welcome#index"   #both root to: ...  and root w/o the to:  work.
+
+
+
+  #get "welcome/index"   #This does not appear to be needed.
+
+end
+ 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -54,4 +64,4 @@ Blog::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
+#
